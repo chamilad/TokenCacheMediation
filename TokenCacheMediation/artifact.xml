@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="TokenReceiverSequence" groupId="com.chamilad.sample.TokenCacheMediation.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/TokenReceiverSequence.xml</file>
+    </artifact>
+    <artifact name="CallBESequence" groupId="com.chamilad.sample.TokenCacheMediation.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/CallBESequence.xml</file>
+    </artifact>
+    <artifact name="LogBackend" groupId="com.chamilad.sample.TokenCacheMediation.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/LogBackend.xml</file>
+    </artifact>
+    <artifact name="CacheTokenAPI" groupId="com.chamilad.sample.TokenCacheMediation.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/CacheTokenAPI.xml</file>
+    </artifact>
+</artifacts>

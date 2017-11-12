@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="SimpleBackend"
+     context="/log">
+   <resource methods="POST" outSequence="main">
+      <inSequence>
+<log level="full" separator="--"/>
+         
+<payloadFactory media-type="text">
+            <format>{"status":"0"}</format>
+            <args/>
+         </payloadFactory>
+         <property name="messageType"
+                   value="application/json"
+                   scope="axis2"
+                   type="STRING"/>
+         <property name="ContentType"
+                   value="application/json"
+                   scope="axis2"
+                   type="STRING"/>
+         <respond/>
+      </inSequence>
+      <faultSequence>
+         <log level="custom">
+            <property name="MSG_FLOW" value="FAULT"/>
+         </log>
+         <drop/>
+      </faultSequence>
+   </resource>
+</api>
